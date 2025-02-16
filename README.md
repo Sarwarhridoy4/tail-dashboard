@@ -55,6 +55,42 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **Theme Toggle**: Click the theme toggle button in the header to switch between light and dark modes.
 - **Sidebar Navigation**: Use the sidebar to navigate between different sections of the dashboard.
 
+## Adding a New Page
+
+To add a new page to this layout, follow these steps:
+
+1. **Create a New Page File**: Add a new file in the `src/app` directory, for example, `newPage.tsx`.
+
+2. **Use the `DashboardLayout` Component**: Import and wrap your page content with the `DashboardLayout` component.
+
+   ```typescript
+   import DashboardLayout from "../components/DashboardLayout";
+
+   export default function NewPage() {
+     return (
+       <DashboardLayout>
+         <main className='flex-1 min-h-screen p-8 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white'>
+           <h2 className='text-2xl font-semibold mb-4'>New Page</h2>
+           <p>This is the content of the new page.</p>
+         </main>
+       </DashboardLayout>
+     );
+   }
+   ```
+
+3. **Add to Sidebar Navigation**: Update `menuList.ts` to include the new page in the sidebar.
+
+   ```typescript
+   export const menuList = [
+     { name: "Dashboard", icon: "HomeIcon", href: "/" },
+     { name: "Analytics", icon: "ChartBarIcon", href: "/analytics" },
+     { name: "Settings", icon: "CogIcon", href: "/settings" },
+     { name: "New Page", icon: "HomeIcon", href: "/newPage" }, // Add this line
+   ];
+   ```
+
+4. **Navigate to the New Page**: Use the sidebar to navigate to your new page.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
