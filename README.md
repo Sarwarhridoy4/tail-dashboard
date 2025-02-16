@@ -1,4 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard Next.js Project
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). It features a responsive dashboard with theme toggling and a sidebar navigation.
+
+## Project Details
+
+- **Framework**: Next.js
+- **Styling**: Tailwind CSS
+- **Icons**: Heroicons
+- **Theme Management**: next-themes
+- **Font**: Geist
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── globals.css
+│   └── menuList.ts
+├── components/
+│   ├── DashboardLayout.tsx
+│   ├── MenuItem.tsx
+│   └── Sidebar.tsx
+└── public/
+    └── next.svg
+```
+
+- **app/layout.tsx**: Root layout with `ThemeProvider`.
+- **app/page.tsx**: Main page using `DashboardLayout`.
+- **components/DashboardLayout.tsx**: Layout component with header and theme toggle.
+- **components/Sidebar.tsx**: Sidebar with navigation links.
+- **components/MenuItem.tsx**: Individual menu item component.
+- **app/globals.css**: Global styles with theme variables.
 
 ## Getting Started
 
@@ -16,9 +50,10 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Theme Toggle**: Click the theme toggle button in the header to switch between light and dark modes.
+- **Sidebar Navigation**: Use the sidebar to navigate between different sections of the dashboard.
 
 ## Learn More
 
